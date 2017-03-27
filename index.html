@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<script src="app.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Video Trimming Application</title>
+   	<link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="inFile()">
+    <h1>Video Trim</h1>
+	<form id="inputform">
+		<label for "file-in">Input File</label>
+		<input id="file-in" type="file" name="filin" onchange="inFile()"><br>
+		<label for "file-out">Output File</label>
+		<input id="file-out" type="text" name="filout" value="" onchange="outFile()"><br>
+		<label for "start-in">Start Time (seconds)</label>
+		<input id="start-in" type="text" name="startin" value="0" onchange="startdisp()"><br>
+		<label for "end-in">Total Length</label>
+		<select name="end-in" id="end-in" data-inline="true" onchange="endTime()">
+			<option value="28:30">28:30</option>
+			<option value="58:30">58:30</option>
+			<option value="Other">Other</option>
+		</select><br>
+		<div id="otherTime"></div>
+		<a href="#" class="blue_sub" onclick="sendData()">Trim</a><br>
+	</form>
+	<p id="demo"></p>
+	<p id="ofilename"></p>
+	<p id="starttime"></p>
+	<p id="etime"></p>
+	<p id="ffoutput"></p>
+  </body>
+</html>
+
